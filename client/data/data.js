@@ -19,5 +19,10 @@ var songData = [
     url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/06+If+Your+Girl+Only+Knew.mp3",
     title: "If Your Girl Only Knew",
     artist: "Aaliyah",
+  },
+  {
+    url: "http://communityguitar.com/students/Songs/sound_clips/HesitationBlues_HotTuna.mp3",
+    title: "Hesitation Blues",
+    artist: "Hot Tuna",
   }
 ];
