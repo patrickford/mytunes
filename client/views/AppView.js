@@ -12,7 +12,15 @@ var AppView = Backbone.View.extend({
     this.model.on('change:currentSong', function(model){
       this.playerView.setSong(model.get('currentSong'));
     }, this);
+
+/*************************************************************************************************************/
+
+    this.model.on('change:songQueue', function(collection){
+      console.log(collection);
+      this.songQueueView.setCollection(collection.get('songQueue'));
+    }, this);
   },
+/*************************************************************************************************************/
 
   render: function(){
     return this.$el.html([
