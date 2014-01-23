@@ -2,6 +2,14 @@
 var SongQueueEntryView = Backbone.View.extend({
   initialize: function(){
     this.$el.attr('class','SongQueueEntryView');
+  },
+
+  tagName: 'tr',
+
+  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
+
+  render: function(){
+    return this.$el.html(this.template(this.model.attributes));
   }
   // your code here!
 });
