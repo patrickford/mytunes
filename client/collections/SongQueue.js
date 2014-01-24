@@ -16,6 +16,9 @@ var SongQueue = Songs.extend({
   },
 
   dequeue: function(song){
+    if (this.indexOf(song) === 0) {
+      this.playNext();
+    }
     this.remove(song);
     if (this.length === 0){
       this.trigger('stop');
@@ -23,8 +26,9 @@ var SongQueue = Songs.extend({
   },
 
   ended: function(){
+    console.log('ended method was called');
     this.shift();
-    if (this.length>= 1) {
+    if (this.length >= 1) {
       this.playFirst();
     }
   },
